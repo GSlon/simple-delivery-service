@@ -19,6 +19,7 @@ def sign_in(request):
         return render(request, 'registration/signin.html', {'form': form})
     elif request.method == 'POST':
         signinform = SignInForm(request.POST)
+        print(request.POST)
         if signinform.is_valid():
             if check_user_exists_from_form(signinform):
                 if authorize_user(signinform):

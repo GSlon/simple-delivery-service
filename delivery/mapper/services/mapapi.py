@@ -20,8 +20,8 @@ def _parse_orders_json(orders: list[Order]) -> list[tuple]:
         start = jsn['start'].split(',')
         end = jsn['end'].split(',')
 
-        startpoint = Point(x=start[0], y=start[1])
-        endpoint = Point(x=end[0], y=end[1])
+        startpoint = Point(x=float(start[0]), y=float(start[1]))
+        endpoint = Point(x=float(end[0]), y=float(end[1]))
 
         coords.append((startpoint, endpoint))
 

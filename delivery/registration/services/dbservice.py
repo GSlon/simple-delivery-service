@@ -4,6 +4,7 @@ from ..forms import SignInForm, SignUpForm
 from ..models import Courier
 from .hasher import hash_password, check_equal_pass_and_hash
 
+
 logger = logging.getLogger(__name__)
 
 
